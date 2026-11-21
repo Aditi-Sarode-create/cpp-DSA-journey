@@ -1,19 +1,24 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main() {
-    int arr[] = {1, 2, 3, 4, 5, 6};
-    int sz = 6;
+int smallest(vector<int>arr){
 
-    int smallest = arr[0];
+     int smallest = arr[0];
 
     for (int i = 1; i < sz; i++) {
         if (arr[i] < smallest) {
             smallest = arr[i];
         }
     }
+    return smallest;
+}
 
-    cout << "The smallest element in the array is: " << smallest << endl;
+int main() {
+
+    vector<int>arr={50,30,60,10}
+    
+    cout << "The smallest element in the array is: " << smallest(arr) << endl;
 
     return 0;
 }
